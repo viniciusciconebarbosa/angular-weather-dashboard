@@ -1,0 +1,50 @@
+<div class="current-weather card" [ngClass]="weatherClass" @fadeInUp>
+  <app-weather-animation [weatherClass]="weatherClass"></app-weather-animation>
+
+  <div class="location-info">
+    <div class="location-header">
+      <span class="material-icons-round location-icon">location_on</span>
+      <div>
+        <h2>{{ location?.name }}</h2>
+        <p>{{ location?.state }}, {{ location?.country }}</p>
+      </div>
+    </div>
+    <p class="date">{{ getCurrentDate() }}</p>
+  </div>
+  
+  <div class="weather-info">
+    <div class="temperature">
+      <span class="temp-value">{{ currentWeather.temperature.max | number:'1.0-0' }}°</span>
+      <span class="unit">C</span>
+    </div>
+    
+    <div class="condition">
+      <app-weather-icon [condition]="currentWeather.weatherCondition" [iconUrl]="currentWeather.iconUrl" [size]="64"></app-weather-icon>
+      <span>{{ currentWeather.weatherCondition }}</span>
+    </div>
+  </div>
+  
+  <div class="details glass-effect">
+    <div class="detail-item">
+      <span class="material-icons-round detail-icon">water_drop</span>
+      <div class="detail-content">
+        <span class="label">Umidade</span>
+        <span class="value">{{ currentWeather.humidity }}%</span>
+      </div>
+    </div>
+    <div class="detail-item">
+      <span class="material-icons-round detail-icon">air</span>
+      <div class="detail-content">
+        <span class="label">Vento</span>
+        <span class="value">{{ currentWeather.windSpeed }} km/h</span>
+      </div>
+    </div>
+    <div class="detail-item">
+      <span class="material-icons-round detail-icon">umbrella</span>
+      <div class="detail-content">
+        <span class="label">Precipitação</span>
+        <span class="value">{{ currentWeather.precipitation }}%</span>
+      </div>
+    </div>
+  </div>
+</div>

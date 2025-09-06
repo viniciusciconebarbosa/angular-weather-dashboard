@@ -1,0 +1,20 @@
+.weather-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  color: inherit;
+}
+
+:host-context(.current-weather) img {
+  color: white;
+}
+
+:host-context(.forecast-day) img {
+  color: var(--text-color);
+}
