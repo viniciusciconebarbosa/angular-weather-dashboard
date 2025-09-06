@@ -1,0 +1,41 @@
+<div class="animation-container">
+  <div class="particles-container" *ngIf="shouldShowParticles()" [@fadeInOut]>
+    <div class="particle" *ngFor="let i of particlesArray" [ngClass]="weatherClass"></div>
+  </div>
+  <div class="lightning-container" *ngIf="weatherClass === 'weather-thunderstorm'" [@fadeInOut]>
+    <div class="lightning"></div>
+    <div class="lightning-bolt"></div>
+    <div class="lightning-bolt lightning-bolt-2"></div>
+  </div>
+  <div class="clouds-container">
+    <div class="cloud cloud-1" [class.active]="weatherClass === 'weather-cloudy' || weatherClass === 'weather-mist' || weatherClass === 'weather-thunderstorm'">
+      <div class="cloud-part cloud-circle-1"></div>
+      <div class="cloud-part cloud-circle-2"></div>
+      <div class="cloud-part cloud-circle-3"></div>
+      <div class="cloud-part cloud-circle-4"></div>
+      <div class="cloud-part cloud-rect"></div>
+    </div>
+    <div class="cloud cloud-2" [class.active]="weatherClass === 'weather-cloudy' || weatherClass === 'weather-mist' || weatherClass === 'weather-thunderstorm'">
+      <div class="cloud-part cloud-circle-1"></div>
+      <div class="cloud-part cloud-circle-2"></div>
+      <div class="cloud-part cloud-circle-3"></div>
+      <div class="cloud-part cloud-circle-4"></div>
+      <div class="cloud-part cloud-rect"></div>
+    </div>
+    <div class="cloud cloud-3" [class.active]="weatherClass === 'weather-cloudy' || weatherClass === 'weather-mist' || weatherClass === 'weather-thunderstorm'">
+      <div class="cloud-part cloud-circle-1"></div>
+      <div class="cloud-part cloud-circle-2"></div>
+      <div class="cloud-part cloud-circle-3"></div>
+      <div class="cloud-part cloud-rect"></div>
+    </div>
+  </div>
+  <div class="sun-container" [class.visible]="weatherClass === 'weather-sunny'" [@fadeInOut]>
+    <div class="sun"></div>
+    <div class="sun-ray" *ngFor="let i of sunRaysArray"></div>
+  </div>
+  <div class="fog-container" [class.visible]="weatherClass === 'weather-mist'" [@fadeInOut]>
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-2"></div>
+    <div class="fog-layer fog-layer-3"></div>
+  </div>
+</div>

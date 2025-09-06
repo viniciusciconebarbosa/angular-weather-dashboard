@@ -1,0 +1,26 @@
+<div class="forecast-container card">
+  <div class="header">
+    <span class="material-icons-round header-icon">date_range</span>
+    <h2>Previsão para os Próximos Dias</h2>
+  </div>
+  
+  <div class="forecast-list" [@listAnimation]="forecast.length">
+    <div *ngFor="let day of forecast; let i = index" 
+         class="forecast-day"
+         [@forecastItem]>
+      <div class="day-name">{{ formatDay(day.date) }}</div>
+      <div class="day-icon">
+        <app-weather-icon [condition]="day.weatherCondition" [iconUrl]="day.iconUrl" [size]="40"></app-weather-icon>
+      </div>
+      <div class="day-condition">{{ day.weatherCondition }}</div>
+      <div class="day-temp">
+        <div class="temp-item">
+          <span class="max">{{ day.temperature.max | number:'1.0-0' }}°</span>
+        </div>
+        <div class="temp-item">
+          <span class="min">{{ day.temperature.min | number:'1.0-0' }}°</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
