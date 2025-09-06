@@ -1,0 +1,54 @@
+<div class="search-container card">
+  <h2>Procurar Localização</h2>
+  <div class="search-form">
+    <div class="input-wrapper">
+      <span class="material-icons-round search-icon">search</span>
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        placeholder="Digite o nome da cidade..."
+        (keyup.enter)="searchLocation()"
+        class="search-input"
+      >
+      <span *ngIf="searchTerm" class="material-icons-round clear-icon" (click)="clearSearch()">close</span>
+    </div>
+    <button (click)="searchLocation()">
+      <span class="material-icons-round">travel_explore</span>
+      Buscar
+    </button>
+  </div>
+  
+  <div *ngIf="isLoading" class="loading" @fadeIn>
+    <div class="loader"></div>
+    <p>Buscando localizações...</p>
+  </div>
+  
+  <div *ngIf="error" class="error-message" @fadeIn>
+    <span class="material-icons-round error-icon">error_outline</span>
+    <p>{{ error }}</p>
+  </div>
+  
+  <div *ngIf="locations.length > 0" class="locations-list" @locationsList>
+    <h3>Selecione uma localização:</h3>
+    <ul [@listAnimation]="locations.length">
+      <li *ngFor="let location of locations" 
+          (click)="selectLocation(location)"
+          class="location-item"
+          @fadeIn>
+        <div class="location-content">
+          <span class="material-icons-round location-icon">location_on</span>
+          <div class="location-text">
+            <span class="location-name">{{ location.name }}</span>
+            <span class="location-info">{{ location.state }}, {{ location.country }}</span>
+          </div>
+        </div>
+        <span class="material-icons-round select-icon">arrow_forward_ios</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="!isLoading && !error && locations.length === 0 && !searchTerm" class="search-tip">
+    <span class="material-icons-round tip-icon">lightbulb</span>
+    <p>Digite o nome de uma cidade para ver a previsão do tempo.</p>
+  </div>
+</div>
