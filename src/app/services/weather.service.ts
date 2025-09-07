@@ -85,7 +85,22 @@ export class WeatherService {
       'WINDY': 'Ventania',
       'SLEET': 'Granizo',
       'HEAVY_RAIN': 'Chuva Forte',
-      'HEAVY_SNOW': 'Nevasca'
+      'HEAVY_SNOW': 'Nevasca',
+      'SCATTERED_SHOWERS': 'Pancadas de Chuva Isoladas',
+      'SCATTERED_THUNDERSTORMS': 'Trovoadas Isoladas',
+      'ISOLATED_THUNDERSTORMS': 'Trovoadas Isoladas',
+      'STRONG_STORMS': 'Tempestades Fortes',
+      'LIGHT_RAIN': 'Chuva Leve',
+      'LIGHT_SNOW': 'Neve Leve',
+      'FREEZING_RAIN': 'Chuva Congelante',
+      'FREEZING_DRIZZLE': 'Garoa Congelante',
+      'MIXED_RAIN_AND_SNOW': 'Chuva com Neve',
+      'MIXED_RAIN_AND_SLEET': 'Chuva com Granizo',
+      'MIXED_SNOW_AND_SLEET': 'Neve com Granizo',
+      'HAZE': 'Névoa',
+      'DUST': 'Poeira',
+      'SMOKE': 'Fumaça',
+      'RAIN_SHOWERS': 'Pancadas de Chuva'
     };
 
     return conditionMap[type] || 'Desconhecido';

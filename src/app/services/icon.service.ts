@@ -27,10 +27,25 @@ export class IconService {
       'HEAVY_SNOW': 'heavy_snow.svg',
       'SLEET': 'sleet_hail.svg',
       'FOG': 'haze_fog_dust_smoke.svg',
-      'WINDY': 'windy.svg'
+      'WINDY': 'windy.svg',
+      'SCATTERED_SHOWERS': 'rain_with_cloudy_light.svg',
+      'SCATTERED_THUNDERSTORMS': 'isolated_thunderstorms.svg',
+      'ISOLATED_THUNDERSTORMS': 'isolated_thunderstorms.svg',
+      'STRONG_STORMS': 'isolated_thunderstorms.svg',
+      'LIGHT_RAIN': 'drizzle.svg',
+      'LIGHT_SNOW': 'snow_with_cloudy_light.svg',
+      'FREEZING_RAIN': 'sleet_hail.svg',
+      'FREEZING_DRIZZLE': 'sleet_hail.svg',
+      'MIXED_RAIN_AND_SNOW': 'sleet_hail.svg',
+      'MIXED_RAIN_AND_SLEET': 'sleet_hail.svg',
+      'MIXED_SNOW_AND_SLEET': 'sleet_hail.svg',
+      'HAZE': 'haze_fog_dust_smoke.svg',
+      'DUST': 'haze_fog_dust_smoke.svg',
+      'SMOKE': 'haze_fog_dust_smoke.svg',
+      'RAIN_SHOWERS': 'rain_with_cloudy_light.svg'
     };
 
     const iconFile = iconMap[condition] || 'cloudy.svg';
     return `${this.iconBasePath}/${iconFile}`;
   }
-} 
+}
