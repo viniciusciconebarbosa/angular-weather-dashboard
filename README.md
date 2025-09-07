@@ -113,9 +113,9 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 ###  Autor
 
-[Seu Nome]
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu Nome](https://www.linkedin.com/in/seu-usuario)
+[Vinicius]
+- GitHub: [@viniciusciconebarbosa](https://github.com/viniciusciconebarbosa)
+- LinkedIn: [Vinicius](https://www.linkedin.com/in/)
 
 ### 🚨 Avisos Importantes
 
