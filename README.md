@@ -2,7 +2,7 @@
 
 Aplicação de previsão do tempo desenvolvida com Angular, oferecendo animações climáticas e interface moderna.
 
-🖥️ [Aplicação Frontend](https://angular-weather-seven.vercel.app/)
+🖥️ [Aplicação Frontend](https://angular-weather-dashboard.vercel.app/)
 
 ## APIs Necessárias
 
