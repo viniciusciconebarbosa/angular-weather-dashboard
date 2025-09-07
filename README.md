@@ -2,9 +2,8 @@
 
 Aplicação de previsão do tempo desenvolvida com Angular, oferecendo animações climáticas e interface moderna.
 
-## Configuração do Ambiente
+🖥️ [Aplicação Frontend](https://angular-weather-seven.vercel.app/)
 
-🖥️ [Aplicaçao Frontend](https://angular-weather-seven.vercel.app/)
 ## APIs Necessárias
 
 Esta aplicação requer duas APIs:
@@ -18,51 +17,31 @@ Esta aplicação requer duas APIs:
    - Habilite a API Weather
    - Crie uma chave de API
 
+## Configuração das Variáveis de Ambiente
 
-Existem duas maneiras de configurar as variáveis de ambiente neste projeto:
+### Para Desenvolvimento Local
 
-### Opção 1: Usando arquivos environment.ts
-
-1. Copie o arquivo de exemplo de ambiente:
+1. **Crie um arquivo `.env` na raiz do projeto:**
    ```bash
-   npm run setup-env
-   ```
-   Ou manualmente:
-   ```bash
-   cp src/environment.example.ts src/environment.ts
-   cp src/environment.example.ts src/environment.prod.ts
+   cp .env.example .env
    ```
 
-2. Edite os arquivos `src/environment.ts` e `src/environment.prod.ts` para incluir suas chaves de API:
-   ```typescript
-   export const environment = {
-     production: false, // use true para environment.prod.ts
-     geocodingApiKey: 'SUA_CHAVE_API_GEOCODING',
-     weatherApiKey: 'SUA_CHAVE_API_WEATHER',
-     geocodingApiUrl: 'https://api.api-ninjas.com/v1/geocoding',
-     weatherApiUrl: 'https://weather.googleapis.com/v1/forecast/days:lookup',
-     defaultDays: 10
-   };
+2. **Adicione suas chaves de API no arquivo `.env`:**
+   ```env
+   GEOCODING_API_KEY=sua_chave_aqui
+   WEATHER_API_KEY=sua_chave_aqui
    ```
 
-### Opção 2: Usando arquivo .env (Recomendado)
+### Para Deploy na Vercel/Netlify
 
-1. Crie um arquivo `.env` na raiz do projeto:
-   ```bash
-   touch .env
-   ```
+Configure as mesmas variáveis no dashboard da plataforma:
+- `GEOCODING_API_KEY`
+- `WEATHER_API_KEY`
+- `GEOCODING_API_URL` (opcional)
+- `WEATHER_API_URL` (opcional)
+- `DEFAULT_DAYS` (opcional)
 
-2. Adicione suas variáveis de ambiente no arquivo `.env`:
-   ```
-   GEOCODING_API_KEY=SUA_CHAVE_API_GEOCODING
-   WEATHER_API_KEY=SUA_CHAVE_API_WEATHER
-   GEOCODING_API_URL=https://api.api-ninjas.com/v1/geocoding
-   WEATHER_API_URL=https://weather.googleapis.com/v1/forecast/days:lookup
-   DEFAULT_DAYS=10
-   ```
-
-> **Importante**: Os arquivos `environment.ts`, `environment.prod.ts` e `.env` estão no `.gitignore` para evitar expor suas chaves de API no repositório. Nunca compartilhe ou cometa esses arquivos.
-
+> **⚠️ IMPORTANTE**: O arquivo `.env` está no `.gitignore` para proteger suas chaves de API. Nunca commite chaves de API para o repositório!
 
 ## Instalação
 
@@ -79,7 +58,7 @@ npm start
 ## Build para Produção
 
 ```bash
-npm run build
+npm run build:prod
 ```
 
 ## Recursos

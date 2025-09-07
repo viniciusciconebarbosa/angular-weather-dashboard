@@ -30,6 +30,7 @@
     "@angular/cli": "^19.2.0",
     "@angular/compiler-cli": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
+    "@types/dotenv": "^6.1.1",
     "@types/jasmine": "^5.1.9",
     "@types/node": "^22.15.3",
     "dotenv-webpack": "^8.1.0",
