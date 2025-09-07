@@ -37,9 +37,10 @@
               ]
             }
           },
+          "defaultConfiguration": "development",
           "options": {
             "customWebpackConfig": {
-              "path": "src/custom-webpack.config.js"
+              "path": "./custom-webpack.config.js"
             },
             "assets": ["src/assets"],
             "index": "src/index.html",
@@ -62,12 +63,7 @@
               "buildTarget": "demo:build:production"
             }
           },
-          "defaultConfiguration": "development",
-          "options": {
-            "customWebpackConfig": {
-              "path": "src/custom-webpack.config.js"
-            }
-          }
+          "defaultConfiguration": "development"
         }
       },
       "prefix": "app",
