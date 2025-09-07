@@ -1,70 +1,119 @@
-# Previsão do Tempo
+# 🌦️ Weather App
 
-Aplicação de previsão do tempo desenvolvida com Angular, oferecendo animações climáticas e interface moderna.
+## Descrição do Projeto
 
-🖥️ [Aplicação Frontend](https://angular-weather-dashboard.vercel.app/)
+Uma aplicação moderna de previsão do tempo desenvolvida com Angular, oferecendo uma interface intuitiva e responsiva para consulta de condições meteorológicas em tempo real.
 
-## APIs Necessárias
+### Funcionalidades Principais
 
-Esta aplicação requer duas APIs:
+- **Busca de Localização**: Pesquise cidades e obtenha informações meteorológicas precisas
+- **Previsão Atual**: Detalhes meteorológicos em tempo real
+- **Previsão Estendida**: Visualização da previsão para os próximos dias
+- **Animações Climáticas**: Ícones e animações interativas representando condições meteorológicas
+- **Design Responsivo**: Interface adaptável para dispositivos móveis e desktop
 
-1. **API Ninja Geocoding** - Para busca de localizações
-   - Registre-se em [API Ninja](https://api-ninjas.com/)
-   - Obtenha sua chave de API gratuita
+### Tecnologias Utilizadas
 
-2. **Google Weather API** - Para dados de previsão do tempo
-   - Configure o [Google Cloud Console](https://console.cloud.google.com/)
-   - Habilite a API Weather
-   - Crie uma chave de API
+- **Frontend**: Angular 19
+- **Linguagem**: TypeScript
+- **Estilização**: CSS
+- **Gerenciamento de Estado**: RxJS
+- **Testes**: Jasmine, Karma
+- **Deploy**: Vercel
 
-## Configuração das Variáveis de Ambiente
+### 🛠️ Pré-requisitos
 
-### Para Desenvolvimento Local
+- Node.js (v20+)
+- npm (v10+)
+- Angular CLI
 
-1. **Crie um arquivo `.env` na raiz do projeto:**
-   ```bash
-   cp .env.example .env
-   ```
+### 🔧 Configuração do Ambiente
 
-2. **Adicione suas chaves de API no arquivo `.env`:**
-   ```env
-   GEOCODING_API_KEY=sua_chave_aqui
-   WEATHER_API_KEY=sua_chave_aqui
-   ```
+1. **Clonar o Repositório**
+```bash
+git clone https://github.com/seu-usuario/weather-app.git
+cd weather-app
+```
 
-### Para Deploy na Vercel/Netlify
-
-Configure as mesmas variáveis no dashboard da plataforma:
-- `GEOCODING_API_KEY`
-- `WEATHER_API_KEY`
-- `GEOCODING_API_URL` (opcional)
-- `WEATHER_API_URL` (opcional)
-- `DEFAULT_DAYS` (opcional)
-
-> **⚠️ IMPORTANTE**: O arquivo `.env` está no `.gitignore` para proteger suas chaves de API. Nunca commite chaves de API para o repositório!
-
-## Instalação
-
+2. **Instalar Dependências**
 ```bash
 npm install
 ```
 
-## Execução em Desenvolvimento
+3. **Configurar Variáveis de Ambiente**
+- Crie um arquivo `.env` na raiz do projeto
+- Use `.env.example` como referência
+- Adicione suas chaves de API:
+  ```
+  GEOCODING_API_KEY=sua_chave_aqui
+  WEATHER_API_KEY=sua_chave_aqui
+  ```
 
+### 🌐 APIs Utilizadas
+
+1. **Geocoding API**
+   - Fonte: API Ninjas
+   - Função: Conversão de nomes de cidades para coordenadas geográficas
+
+2. **Weather API**
+   - Fonte: Google Weather API
+   - Função: Obtenção de dados meteorológicos detalhados
+
+### 🖥️ Executando o Projeto
+
+**Desenvolvimento**:
 ```bash
 npm start
 ```
+- Acesse: `http://localhost:4200`
 
-## Build para Produção
-
+**Produção**:
 ```bash
 npm run build:prod
 ```
 
-## Recursos
+### 🧪 Executando Testes
 
-- Previsão do tempo atual e para os próximos dias
-- Animações climáticas interativas
-- Interface responsiva e moderna
-- Busca de localizações por nome
-- Armazenamento da última localização pesquisada 
+**Testes Unitários**:
+```bash
+npm test
+```
+
+**Cobertura de Testes**:
+```bash
+npm run test:coverage
+```
+
+### 📦 Build
+
+```bash
+npm run build
+```
+- Arquivos de build serão gerados em `dist/demo`
+
+### 🤝 Contribuição
+
+1. Faça um fork do projeto
+2. Crie sua feature branch (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request
+
+### 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+###  Autor
+
+[Seu Nome]
+- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+- LinkedIn: [Seu Nome](https://www.linkedin.com/in/seu-usuario)
+
+### 🚨 Avisos Importantes
+
+- Certifique-se de não commitar chaves de API
+- Use variáveis de ambiente para configurações sensíveis
+- Verifique os requisitos de uso das APIs utilizadas
+
+---
+
