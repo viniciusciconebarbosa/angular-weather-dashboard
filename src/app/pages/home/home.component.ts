@@ -17,49 +17,8 @@ import { WeatherData } from '../../models/weather.model';
     CurrentWeatherComponent,
     ForecastComponent
   ],
-  template: `
-    <div class="container">
-      <app-search 
-        (locationSelected)="onLocationSelected($event)"
-      ></app-search>
-      
-      <div *ngIf="isLoading" class="loading">
-        <p>Loading weather data...</p>
-      </div>
-      
-      <div *ngIf="error" class="error-message card">
-        <p>{{ error }}</p>
-      </div>
-      
-      <div *ngIf="weatherData && !isLoading" class="weather-container fade-in">
-        <app-current-weather 
-          [currentWeather]="weatherData.currentDay"
-          [location]="selectedLocation"
-        ></app-current-weather>
-        
-        <app-forecast 
-          [forecast]="weatherData.forecast"
-        ></app-forecast>
-      </div>
-    </div>
-  `,
-  styles: [`
-    .loading {
-      text-align: center;
-      padding: calc(var(--spacing-unit) * 4);
-      color: var(--text-muted);
-    }
-    
-    .error-message {
-      background-color: #ffebee;
-      color: var(--error-color);
-      text-align: center;
-    }
-    
-    .weather-container {
-      margin-top: calc(var(--spacing-unit) * 3);
-    }
-  `]
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   isLoading = false;

@@ -1,0 +1,14 @@
+.loading {
+  padding: calc(var(--spacing-unit) * 4);
+  color: var(--text-muted);
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: var(--error-color);
+  text-align: center;
+}
+
+.weather-container {
+  margin-top: calc(var(--spacing-unit) * 3);
+}

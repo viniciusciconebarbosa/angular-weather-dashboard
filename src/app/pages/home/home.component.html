@@ -1,0 +1,24 @@
+<div class="container">
+  <app-search 
+    (locationSelected)="onLocationSelected($event)"
+  ></app-search>
+  
+  <div *ngIf="isLoading" class="loading">
+    <p>Loading weather data...</p>
+  </div>
+  
+  <div *ngIf="error" class="error-message card">
+    <p>{{ error }}</p>
+  </div>
+  
+  <div *ngIf="weatherData && !isLoading" class="weather-container fade-in">
+    <app-current-weather 
+      [currentWeather]="weatherData.currentDay"
+      [location]="selectedLocation"
+    ></app-current-weather>
+    
+    <app-forecast 
+      [forecast]="weatherData.forecast"
+    ></app-forecast>
+  </div>
+</div>
