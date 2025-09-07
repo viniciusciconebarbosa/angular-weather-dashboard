@@ -65,7 +65,12 @@ npm install
 ```bash
 npm start
 ```
+<img width="1103" height="505" alt="image" src="https://github.com/user-attachments/assets/d9941c00-fc65-4aa9-b59b-92c6f1cfb6e8" />
+
+
 - Acesse: `http://localhost:4200`
+
+
 
 **Produção**:
 ```bash
@@ -78,6 +83,9 @@ npm run build:prod
 ```bash
 npm test
 ```
+
+<img width="1004" height="960" alt="image" src="https://github.com/user-attachments/assets/dd613adf-d5e0-4ab0-9dd2-351d8da11dd0" />
+
 
 **Cobertura de Testes**:
 ```bash
