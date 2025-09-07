@@ -43,16 +43,20 @@ export class ForecastComponent {
 
   formatDay(date: string): string {
     const dayNames = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-    const dayDate = new Date(date);
+    
+    // Parse da data em formato YYYY-MM-DD para evitar problemas de timezone
+    const [year, month, day] = date.split('-').map(Number);
+    const dayDate = new Date(year, month - 1, day);
     
     const today = new Date();
-    if (dayDate.toDateString() === today.toDateString()) {
+    const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    
+    if (dayDate.getTime() === todayDate.getTime()) {
       return 'Hoje';
     }
     
-    const tomorrow = new Date();
-    tomorrow.setDate(today.getDate() + 1);
-    if (dayDate.toDateString() === tomorrow.toDateString()) {
+    const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+    if (dayDate.getTime() === tomorrow.getTime()) {
       return 'Amanhã';
     }
     
